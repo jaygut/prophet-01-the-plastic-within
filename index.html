@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#06111e">
+  <meta name="description" content="Prophet 01: The Plastic Within, an evidence-gated Delphi investment thesis on microplastics and the human exposome.">
+  <title>Prophet 01 · The Plastic Within</title>
+  <link rel="stylesheet" href="css/brand.css">
+  <link rel="stylesheet" href="css/story.css">
+  <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to the story</a>
+  <canvas id="atmosphere" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="story-hud" id="story-hud">
+    <a class="hud-brand" href="https://www.delphi.vc/" aria-label="Visit Delphi VC, Prophet section">
+      <span>PROPHET</span><small>THE WORLD BECOMES US / 01</small>
+    </a>
+    <div class="hud-readout" aria-live="polite" aria-atomic="true">
+      <span id="hud-chapter">BOUNDARY / 00</span>
+      <strong id="hud-evidence">OBSERVED</strong>
+    </div>
+    <div class="hud-actions">
+      <span class="review-stamp">REVIEWED · 16 JUL 2026</span>
+      <button class="source-trigger" id="open-sources" type="button" hidden>Sources + method</button>
+      <a class="source-fallback" href="#source-register">Sources + method</a>
+    </div>
+    <div class="hud-progress" aria-hidden="true"><i id="hud-progress-bar"></i></div>
+  </header>
+
+  <nav class="chapter-rail" aria-label="Story chapters">
+    <a href="#particle"><span>01</span><em>The particle</em></a>
+    <a href="#measurement-problem"><span>02</span><em>Measurement</em></a>
+    <a href="#evidence-chamber"><span>03</span><em>Evidence</em></a>
+    <a href="#risk-matrix"><span>04</span><em>Risk matrix</em></a>
+    <a href="#investable-stack"><span>05</span><em>Stack</em></a>
+    <a href="#delphi-position"><span>06</span><em>Position</em></a>
+    <a href="#thesis-diff"><span>07</span><em>Thesis diff</em></a>
+    <a href="#invitation"><span>08</span><em>Invitation</em></a>
+  </nav>
+
+  <aside class="claim-boundary" aria-label="Persistent evidence boundary">
+    <span>DETECTION ≠ CAUSALITY</span>
+    <p id="claim-boundary-copy">Every material claim opens to evidence and limits.</p>
+    <a href="#source-register">Evidence ledger</a>
+  </aside>
+
+  <main id="main-content">
+    <section class="cold-open story-scene" id="boundary" data-scene="cold-open" data-act="00" data-evidence="Observed" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="series-mark">PROPHET / THE WORLD BECOMES US / 01</p>
+        <p class="act-label">Cold open · a measured boundary</p>
+        <h1 id="hero-title">THE PLASTIC<br><span>WITHIN</span></h1>
+        <p class="hero-deck">Microplastics are tiny plastic fragments shed by everyday materials. They now reach almost every environment on Earth, from ocean depths to Arctic ice, and studies have found them inside the human body, in lung tissue and in artery plaque. Whether they harm health at the population scale is still being measured, and reliable measurement is only now arriving.</p>
+        <div class="hero-boundary" data-claim="P01-CLAIM-029 P01-CLAIM-001 P01-CLAIM-002 P01-CLAIM-023">
+          <strong>OBSERVATION</strong>
+          <p>These particles are now reported across the environment and inside the human body, in lung tissue and in artery plaque removed during surgery. Whether they cause disease across the population has not been established.</p>
+          <div class="claim-link-row" aria-label="Claims supporting the opening observation">
+            <a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-029">Environmental spread</a>
+            <a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-001">Lung detection</a>
+            <a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-002">Plaque detection</a>
+            <a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-023">Causal boundary</a>
+          </div>
+        </div>
+        <div class="hero-inference" data-claim="P01-CLAIM-015 P01-CLAIM-017 P01-CLAIM-024 P01-CLAIM-028">
+          <strong>DELPHI READ · WHY THIS IS AN EMERGING OPPORTUNITY</strong>
+          <p>The concern is no longer only about polluted oceans. Governments now treat microplastics as a serious human-health question, funding measurement, restricting sources, and standing up dedicated programs, including a $144 million ARPA-H effort to combat microplastics in the body. Delphi's read is that the durable companies form where that response creates real buyers and budgets. Public attention alone does not prove venture returns.</p>
+          <div class="claim-link-row" aria-label="Claims supporting the Delphi read">
+            <a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-024">Why measurement leads</a>
+            <a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-017">$144M program envelope</a>
+            <a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-028">Counter-thesis</a>
+          </div>
+        </div>
+        <a class="enter-story" href="#particle">Follow one particle <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-instrument" aria-hidden="true">
+        <svg class="hero-diagram" viewBox="0 0 960 600" role="presentation" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <linearGradient id="tissue-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a999ff" stop-opacity=".2"/><stop offset="1" stop-color="#66c7f2" stop-opacity=".04"/></linearGradient>
+            <radialGradient id="tissue-core" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ff7f73" stop-opacity=".32"/><stop offset="1" stop-color="#ff7f73" stop-opacity="0"/></radialGradient>
+          </defs>
+          <g class="env-dots">
+            <circle cx="70" cy="165" r="4"/><circle cx="152" cy="118" r="2.5" class="warm"/><circle cx="112" cy="288" r="3"/>
+            <circle cx="214" cy="228" r="2"/><circle cx="58" cy="372" r="2.5" class="cool"/><circle cx="186" cy="404" r="3.5" class="warm"/>
+            <circle cx="246" cy="150" r="2"/><circle cx="96" cy="462" r="2"/><circle cx="252" cy="352" r="2.5"/>
+          </g>
+          <g class="boundary-line">
+            <path d="M424 56 C 452 186, 402 326, 440 452 C 458 512, 430 532, 440 556" fill="none" stroke="#66c7f2" stroke-opacity=".42" stroke-dasharray="3 7"/>
+            <rect x="402" y="282" width="58" height="64" rx="7" fill="rgba(102,199,242,.05)" stroke="#66c7f2" stroke-opacity=".55"/>
+          </g>
+          <g class="figure">
+            <circle class="head" cx="762" cy="162" r="56" fill="url(#tissue-fill)" stroke="#a999ff" stroke-opacity=".38"/>
+            <path class="torso" d="M640 556 C 640 384, 690 296 762 292 C 834 296, 884 384, 884 556 Z" fill="url(#tissue-fill)" stroke="#a999ff" stroke-opacity=".38"/>
+            <ellipse class="tissue-core" cx="762" cy="380" rx="66" ry="80" fill="url(#tissue-core)"/>
+          </g>
+          <path class="particle-track" d="M112 288 C 260 298, 362 318, 431 314 C 560 306, 646 366, 762 380" fill="none"/>
+          <circle class="tracked-particle" cx="112" cy="288" r="5.5"/>
+        </svg>
+        <div class="hero-legend" aria-hidden="true">
+          <span><b>SOURCE</b><small>everyday environment</small></span>
+          <i></i>
+          <span><b>SAMPLED BOUNDARY</b><small>where a study samples</small></span>
+          <i></i>
+          <span><b>SAMPLED TISSUE</b><small>the body sample examined</small></span>
+        </div>
+        <div class="hero-caption"><span>ILLUSTRATIVE DIAGRAM</span><small>No amount, frequency or health risk is shown</small></div>
+      </div>
+      <div class="scroll-cue" aria-hidden="true"><i></i><span>SCROLL TO RESOLVE</span></div>
+    </section>
+
+    <section class="story-scene particle-scene" id="particle" data-scene="particle" data-act="01" data-evidence="Observed" aria-labelledby="particle-title">
+      <header class="act-heading particle-heading">
+        <p class="act-label">Act 01 · attach the coordinates</p>
+        <h2 id="particle-title">A detection needs<br><span>a passport.</span></h2>
+        <p>A single "we found plastic" number means little on its own. It becomes usable only when it travels with its full context, the exposure route, the particle's size and shape, the specific polymer, its added chemistry, the tissue that was sampled and the method that measured it. Strip any one of these and the same result can be read to say almost anything.</p>
+        <a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-006">Why the coordinates matter</a>
+      </header>
+
+      <div class="particle-flow">
+        <div class="pathway-console">
+          <div class="control-label" id="pathway-label">Trace a reviewed pathway</div>
+          <div class="segmented-control" role="tablist" aria-labelledby="pathway-label">
+            <button type="button" role="tab" aria-selected="true" aria-controls="pathway-panel" id="path-inhale" data-path="inhale">Inhale</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="pathway-panel" id="path-ingest" data-path="ingest" tabindex="-1">Ingest</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="pathway-panel" id="path-circulate" data-path="circulate" tabindex="-1">Circulate</button>
+          </div>
+          <article class="route-readout glass-card" id="pathway-panel" role="tabpanel" aria-labelledby="path-inhale" tabindex="0">
+            <span class="state-chip observed" id="path-state">OBSERVED · SELECTED TISSUE</span>
+            <h3 id="path-title">Air → sampled lung tissue</h3>
+            <p id="path-copy">A μFTIR study, using particle-resolved infrared spectroscopy, reported 39 particles in 11 of 13 surgical lung samples and published blank-adjusted results.</p>
+            <p class="limit-line"><strong>BOUNDARY</strong><span id="path-limit">This supports an inhalation route and does not establish disease or population prevalence.</span></p>
+            <a class="claim-link" id="path-claim" href="#source-register" data-claim-id="P01-CLAIM-001">Open P01-CLAIM-001</a>
+          </article>
+        </div>
+
+        <div class="passport-steps" id="passport-steps" aria-label="Seven particle-passport coordinates">
+          <p class="control-label">Scroll through the passport · the pathway selection remains independent</p>
+          <article class="passport-step is-current" data-passport-step="size" aria-current="step"><span>01 / SIZE</span><p>State the particle-size window the method can report.</p></article>
+          <article class="passport-step" data-passport-step="shape"><span>02 / SHAPE</span><p>Retain fragment, fibre or other morphology when the workflow supports it.</p></article>
+          <article class="passport-step" data-passport-step="polymer"><span>03 / POLYMER</span><p>Report the identified polymer rather than a category-wide surrogate.</p></article>
+          <article class="passport-step" data-passport-step="chemistry"><span>04 / CHEMISTRY</span><p>Keep additives and surface chemistry distinct from polymer identity.</p></article>
+          <article class="passport-step" data-passport-step="route"><span>05 / ROUTE</span><p>Name the exposure route under review.</p></article>
+          <article class="passport-step" data-passport-step="matrix"><span>06 / MATRIX</span><p>Name the tissue, fluid or environmental matrix that was sampled.</p></article>
+          <article class="passport-step" data-passport-step="method"><span>07 / METHOD</span><p>Carry preparation, blank controls and the chosen measurement into the interpretation.</p></article>
+        </div>
+      </div>
+
+      <aside class="act-visual particle-passport" data-route="inhale" data-passport-step="size" data-claim="P01-CLAIM-001 P01-CLAIM-006 P01-CLAIM-023" aria-labelledby="passport-visual-title" aria-describedby="path-visual-equivalent">
+        <div class="visual-head"><span id="passport-visual-title">PARTICLE PASSPORT</span><small>Coordinates only · no risk score</small></div>
+
+        <section class="lung-study-object" data-claim="P01-CLAIM-001" aria-labelledby="lung-study-title">
+          <header><span>FIXED ANCHOR · HUMAN LUNG STUDY</span><strong id="lung-study-title">One qualified observation</strong></header>
+          <div class="lung-quant">
+            <div class="particle-total"><strong>39</strong><span>particles reported<br>across the study</span></div>
+            <div class="sample-result">
+              <div class="sample-marks" aria-hidden="true">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="without"></i><i class="without"></i>
+              </div>
+              <p><strong>13 samples</strong><span>11 with reported detection · 2 without reported detection</span></p>
+            </div>
+          </div>
+          <div class="study-method"><span>μFTIR</span><span>≥3 μm method limit</span><span>Blank-adjusted result reported</span></div>
+          <p class="study-boundary">The 39 is a study total. This object does not allocate particles among individual samples or estimate prevalence.</p>
+          <a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-001">Study design, locator and limit</a>
+        </section>
+
+        <section class="passport-instrument" aria-label="Seven-coordinate illustrative passport">
+          <div class="passport-core" aria-hidden="true"><i></i><b></b><span></span></div>
+          <dl class="passport-fields">
+            <div data-field="size"><dt>SIZE</dt><dd>Method window</dd></div>
+            <div data-field="shape"><dt>SHAPE</dt><dd>Fragment / fibre / other</dd></div>
+            <div data-field="polymer"><dt>POLYMER</dt><dd>Specific polymer identity</dd></div>
+            <div data-field="chemistry"><dt>CHEMISTRY</dt><dd>Additives / surface</dd></div>
+            <div data-field="route"><dt>ROUTE</dt><dd id="passport-route-value">Inhalation under review</dd></div>
+            <div data-field="matrix"><dt>MATRIX</dt><dd id="passport-matrix-value">Sampled lung tissue</dd></div>
+            <div data-field="method"><dt>METHOD</dt><dd id="passport-method-value">μFTIR · ≥3 μm</dd></div>
+          </dl>
+          <div class="route-diagram" id="path-route-diagram" aria-hidden="true">
+            <span class="route-node active" id="route-source-label">AIR</span><i></i><span class="route-node active" id="route-route-label">INHALE</span><i></i><span class="route-node active" id="route-matrix-label">LUNG</span><i></i><span class="route-node" id="route-stage-label">DETECTION</span>
+          </div>
+        </section>
+        <p class="visual-equivalent" id="path-visual-equivalent" aria-live="polite">Claim P01-CLAIM-001. The selected inhalation route leads to sampled lung tissue. The visual lists seven interpretive coordinates and encodes no dose, prevalence or risk score.</p>
+      </aside>
+      <div class="static-path-register" aria-label="All pathway views, static fallback">
+        <h3>Complete pathway views</h3>
+        <article><span>INHALE · OBSERVED</span><p>Air → sampled lung tissue. A μFTIR study reported 39 particles in 11 of 13 surgical samples with blank-adjusted results.</p><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-001">Evidence + limit</a></article>
+        <article><span>INGEST · ROUTE UNDER REVIEW</span><p>Food or water → route unresolved. Human-matrix detection alone does not identify an individual particle's exposure route.</p><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-023">Evidence + limit</a></article>
+        <article><span>CIRCULATE · OBSERVED</span><p>Circulation → sampled carotid plaque. The selected surgery cohort resolves neither original exposure route nor causality.</p><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-002">Evidence + limit</a></article>
+      </div>
+    </section>
+
+    <section class="story-scene measurement-scene" id="measurement-problem" data-scene="measurement-problem" data-act="02" data-evidence="Established" aria-labelledby="measurement-title">
+      <header class="act-heading measurement-heading">
+        <p class="act-label">Act 02 · define the measurand</p>
+        <h2 id="measurement-title">Same sample.<br><span>Different answer.</span></h2>
+        <p>The instrument you choose decides which question the sample actually answers. One method counts and identifies individual particles. Another burns the sample to weigh how much polymer is present. Contamination controls, how the sample is prepared and the smallest particle a method can see all shape the final number, so two careful laboratories can report the same sample differently.</p>
+        <a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-006">Measurement evidence and limits</a>
+      </header>
+
+      <div class="method-controls" role="tablist" aria-label="Compare method and quality-system profiles">
+        <button type="button" role="tab" aria-selected="true" aria-controls="method-panel" id="method-ftir" data-method="ftir">μFTIR</button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="method-panel" id="method-raman" data-method="raman" tabindex="-1">Raman</button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="method-panel" id="method-pyro" data-method="pyro" tabindex="-1">Py-GC/MS</button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="method-panel" id="method-reference" data-method="reference" tabindex="-1">Reference + QA</button>
+      </div>
+
+      <aside class="act-visual method-prism" data-method-state="ftir" data-method-kind="instrument" data-claim="P01-CLAIM-006 P01-CLAIM-007 P01-CLAIM-008 P01-CLAIM-009" aria-labelledby="method-visual-title" aria-describedby="method-graphic-equivalent">
+        <div class="visual-head"><span id="method-visual-title">METHOD PRISM / DECLARED OUTPUT</span><small id="method-visual-caption">μFTIR profile · capability map</small></div>
+        <div class="method-graphic" id="method-graphic">
+          <div class="method-input" aria-hidden="true"><i></i><span id="method-input-label">PREPARED SAMPLE</span></div>
+          <div class="method-beam" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="method-mode"><span id="method-graphic-mode">PARTICLE-RESOLVED</span><strong id="method-graphic-name">μFTIR</strong></div>
+          <div class="output-lanes" aria-hidden="true">
+            <div data-lane="count" class="is-on"><span>COUNT</span><i></i><small id="lane-count-state">RETAINED</small></div>
+            <div data-lane="morphology" class="is-on"><span>MORPHOLOGY</span><i></i><small id="lane-morphology-state">RETAINED</small></div>
+            <div data-lane="identity" class="is-on"><span>POLYMER ID</span><i></i><small id="lane-identity-state">RETAINED</small></div>
+            <div data-lane="mass" class="is-off"><span>POLYMER MASS</span><i></i><small id="lane-mass-state">NOT THIS OUTPUT</small></div>
+            <div data-lane="comparability" class="is-conditional"><span>COMPARABILITY</span><i></i><small id="lane-comparability-state">QA DEPENDENT</small></div>
+          </div>
+          <p class="qa-layer" id="qa-layer">Reference materials, blanks, recovery and proficiency sit across the analytical workflow.</p>
+        </div>
+
+        <div class="lab-study-register" aria-label="Two separate interlaboratory study designs">
+          <article class="lab-study study-clean-water" data-claim="P01-CLAIM-007">
+            <header><span>STUDY 01 · SIMULATED CLEAN WATER</span><strong>22 laboratories</strong></header>
+            <dl><div><dt>Design</dt><dd>FTIR and Raman on a specified clean-water particle set</dd></div><div><dt>Reported result</dt><dd>95% and 91% correct polymer identification among analyzed particles; blank contamination averaged 91 particles, standard deviation 141</dd></div><div><dt>Boundary</dt><dd>Clean water does not validate a human biospecimen workflow</dd></div></dl>
+            <a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-007">Open study 01</a>
+          </article>
+          <div class="study-separator"><span>SEPARATE DESIGN</span><small>Laboratory count identifies the study; it carries no comparison</small></div>
+          <article class="lab-study study-vamas" data-claim="P01-CLAIM-008">
+            <header><span>STUDY 02 · VAMAS TABLET MATRIX</span><strong>84 laboratories</strong></header>
+            <dl><div><dt>Design</dt><dd>Simplified matrix with 10–200 μm PE and PET reference materials</dd></div><div><dt>Reported result</dt><dd>Wide reproducibility ranges remained across spectroscopic and thermo-analytical methods</dd></div><div><dt>Boundary</dt><dd>The study does not provide a universal laboratory error rate</dd></div></dl>
+            <a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-008">Open study 02</a>
+          </article>
+        </div>
+        <p class="visual-equivalent" id="method-graphic-equivalent" aria-live="polite">Claim P01-CLAIM-006. μFTIR can retain particle count, morphology and polymer identity within a method-dependent window. Polymer mass is a different measurand, and cross-laboratory comparability remains quality-system dependent.</p>
+      </aside>
+
+      <div class="method-detail">
+        <article class="method-panel glass-card" id="method-panel" role="tabpanel" aria-labelledby="method-ftir" tabindex="0">
+          <div class="method-title-row"><span id="method-kicker">PARTICLE-RESOLVED SPECTROSCOPY</span><strong id="method-output">IDENTITY · COUNT · SIZE · SHAPE</strong></div>
+          <h3 id="method-title">μFTIR (particle-resolved infrared spectroscopy) resolves individual particles within a method-dependent window.</h3>
+          <p id="method-copy">It can identify polymer spectra and retain morphology. Substrate, preparation, scan strategy and the lower size threshold shape the report.</p>
+          <dl>
+            <div><dt>Retains</dt><dd id="method-retains">Particle-level identity and morphology</dd></div>
+            <div><dt>Limits</dt><dd id="method-limits">Very small particles and complex-matrix recovery remain workflow dependent</dd></div>
+            <div><dt>Decisive control</dt><dd id="method-control">Blanks, recovery, spectral library and declared size window</dd></div>
+          </dl>
+          <a class="claim-link" id="method-claim" href="#source-register" data-claim-id="P01-CLAIM-006">Open P01-CLAIM-006</a>
+        </article>
+        <blockquote class="investment-reveal" data-claim="P01-CLAIM-006 P01-CLAIM-009 P01-CLAIM-014 P01-CLAIM-024">
+          Comparable measurement is Delphi's first diligence gate for interpreting biology, pricing risk or testing an intervention.
+          <a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-024">Investment inference and caveat</a>
+        </blockquote>
+      </div>
+
+      <div class="static-method-register" aria-label="Complete method profiles for static and no-JavaScript reading">
+        <h3>Complete method profiles</h3>
+        <div>
+          <article><span>μFTIR</span><p>Particle-resolved identity and morphology within a declared workflow window.</p></article>
+          <article><span>Raman</span><p>Particle-resolved spectra, count, size and shape with fluorescence, throughput and recovery limits.</p></article>
+          <article><span>Py-GC/MS</span><p>Destructive polymer-mass analysis. It weighs polymer-specific mass after the sample is destroyed, so particle count and morphology are discarded.</p></article>
+          <article><span>Reference + QA</span><p>A cross-workflow layer for controls, recovery and proficiency. It performs no analytical measurement.</p></article>
+        </div>
+        <div class="static-claim-pair"><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-006">Method boundary</a><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-009">Reference + QA boundary</a></div>
+      </div>
+    </section>
+
+    <section class="story-scene evidence-scene" id="evidence-chamber" data-scene="evidence-chamber" data-act="03" data-evidence="Contested" aria-labelledby="evidence-title">
+      <header class="act-heading evidence-heading">
+        <p class="act-label">Act 03 · keep the categories separate</p>
+        <h2 id="evidence-title">Every thread stops<br><span>where evidence stops.</span></h2>
+        <p>Evidence comes in levels. Finding a particle in tissue is the first level. Linking it to an outcome, then showing a biological mechanism, then proving cause in an experiment, then proving it in people, each sits a step higher and is harder to earn. Every thread on this page is placed at the highest level the public evidence truly supports, and the step above it is left visibly empty.</p>
+        <a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-023">Category-level causal boundary</a>
+      </header>
+
+      <div class="thread-tabs" role="tablist" aria-label="Choose an evidence thread">
+        <button type="button" role="tab" aria-selected="true" aria-controls="thread-panel" id="thread-lung" data-thread="lung">Lung</button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="thread-panel" id="thread-plaque" data-thread="plaque" tabindex="-1">Plaque</button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="thread-panel" id="thread-brain" data-thread="brain" tabindex="-1">Brain</button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="thread-panel" id="thread-tpe" data-thread="tpe" tabindex="-1">Plasma exchange</button>
+      </div>
+
+      <aside class="act-visual evidence-ladder-visual" data-thread-state="lung" data-claim="P01-CLAIM-001 P01-CLAIM-003 P01-CLAIM-004 P01-CLAIM-019 P01-CLAIM-020 P01-CLAIM-023" aria-labelledby="ladder-title" aria-describedby="thread-visual-equivalent">
+        <div class="visual-head"><span id="ladder-title">EVIDENCE CHAMBER</span><small>Categorical state · never a score</small></div>
+        <div class="ladder-context">
+          <span id="thread-design">13 surgical tissue samples · μFTIR · blank controls</span>
+          <strong id="thread-visual-limit">Selected small series; disease and prevalence remain unresolved.</strong>
+        </div>
+        <ol class="evidence-ladder" id="evidence-ladder-list">
+          <li class="reached current" data-rung="1"><span>01</span><div><strong>Reported in a human matrix</strong><small>Detection</small></div><i>STOPS HERE</i></li>
+          <li data-rung="2"><span>02</span><div><strong>Human association observed</strong><small>Temporal or cross-sectional association</small></div><i>NOT THIS THREAD</i></li>
+          <li data-rung="3"><span>03</span><div><strong>Mechanism supported</strong><small>Biological plausibility</small></div><i>NOT THIS THREAD</i></li>
+          <li data-rung="4"><span>04</span><div><strong>Experimental causality</strong><small>Controlled model evidence</small></div><i>NOT THIS THREAD</i></li>
+          <li data-rung="5"><span>05</span><div><strong>Human causality</strong><small>Prospective causal evidence</small></div><i>UNFILLED</i></li>
+          <li class="locked" data-rung="6"><span>06</span><div><strong>Validated reversal</strong><small>Safe clearance + human benefit</small></div><i>UNFILLED</i></li>
+        </ol>
+        <p class="chamber-boundary" data-claim="P01-CLAIM-020 P01-CLAIM-023">Human causality and validated reversal remain unfilled in this reviewed public set.</p>
+        <p class="visual-equivalent" id="thread-visual-equivalent" aria-live="polite">Claim P01-CLAIM-001. The selected lung-tissue thread stops at detection in a 13-sample μFTIR study. Disease, population prevalence and dose-response remain unestablished.</p>
+      </aside>
+
+      <article class="thread-readout" id="thread-panel" role="tabpanel" aria-labelledby="thread-lung" tabindex="0">
+        <span class="state-chip observed" id="thread-state">OBSERVED</span>
+        <p class="thread-stop" id="thread-stop">STOPS AT RUNG 01 / DETECTED</p>
+        <h3 id="thread-title">Selected lung tissue</h3>
+        <p id="thread-copy">Particles were reported with a stated size limit and blank controls.</p>
+        <p class="limit-line"><strong>BOUNDARY</strong><span id="thread-limit">Disease, population prevalence and dose-response remain unestablished.</span></p>
+        <a class="claim-link" id="thread-claim" href="#source-register" data-claim-id="P01-CLAIM-001">Open evidence and study limits</a>
+      </article>
+
+      <div class="accessible-table-wrap" data-claim="P01-CLAIM-001 P01-CLAIM-002 P01-CLAIM-003 P01-CLAIM-004 P01-CLAIM-019 P01-CLAIM-020">
+        <table>
+          <caption>Evidence ladder text equivalent</caption>
+          <thead><tr><th>Thread</th><th>Highest supported state</th><th>Design</th><th>Boundary</th></tr></thead>
+          <tbody>
+            <tr><td>Lung</td><td>Detection</td><td>13 tissue samples, μFTIR</td><td>No disease inference</td></tr>
+            <tr><td>Carotid plaque</td><td>Human association</td><td>Prospective observational cohort</td><td>No causal inference</td></tr>
+            <tr><td>Postmortem brain</td><td>Detection, method-sensitive</td><td>Postmortem complementary methods</td><td>No living burden or dementia causality</td></tr>
+            <tr><td>Plasma exchange</td><td>Immediate assay signal</td><td>Uncontrolled pre/post study</td><td>No validated total-body reversal or benefit</td></tr>
+          </tbody>
+        </table>
+        <div class="static-claim-pair table-claims"><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-001">Lung</a><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-003">Plaque</a><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-004">Brain</a><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-019">Plasma exchange</a><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-020">Removal boundary</a></div>
+      </div>
+    </section>
+
+    <section class="story-scene risk-scene" id="risk-matrix" data-scene="risk-matrix" data-act="04" data-evidence="Contested" aria-labelledby="risk-title">
+      <header class="wide-heading risk-heading">
+        <div><p class="act-label">Act 04 · separate the decision coordinates</p><h2 id="risk-title">Risk has coordinates.<br><span>Unknown is a result.</span></h2></div>
+        <div><p>To judge real-world risk you need many separate facts, what the particle is, how much is present, where it travels in the body and what it does there. This grid marks which of those facts the public evidence actually reports, which are only partly known and which are still blank. A blank cell carries information of its own. It marks where the science, and the investment case, are not yet ready.</p><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-005">Contested interpretation</a></div>
+      </header>
+
+      <div class="risk-view-tabs" role="tablist" aria-label="Matrix view">
+        <button type="button" role="tab" aria-selected="true" aria-controls="risk-panel" id="risk-evidence" data-risk-view="evidence">Evidence view</button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="risk-panel" id="risk-diligence" data-risk-view="diligence" tabindex="-1">Diligence view</button>
+      </div>
+
+      <aside class="act-visual risk-matrix-visual" data-risk-state="evidence" data-claim="P01-CLAIM-005 P01-CLAIM-028" aria-labelledby="matrix-title" aria-describedby="matrix-description">
+        <div class="visual-head"><span id="matrix-title">PROPERTY × EVIDENCE MATRIX</span><small id="matrix-caption">Availability · no risk magnitude encoded</small></div>
+        <div class="matrix-legend" id="matrix-legend">
+          <span><i class="known"></i><b id="risk-legend-known">Reported</b></span>
+          <span><i class="partial"></i><b id="risk-legend-partial">Partial / method-sensitive</b></span>
+          <span><i class="unknown"></i><b id="risk-legend-unknown">Unknown for decision</b></span>
+        </div>
+        <div class="matrix-grid" id="matrix-grid" role="img" aria-describedby="matrix-description">
+          <span class="matrix-corner">DIMENSION</span><span class="matrix-head">IDENTITY</span><span class="matrix-head">DOSE</span><span class="matrix-head">FATE</span><span class="matrix-head">OUTCOME</span>
+          <strong>Size</strong><i class="partial"></i><i class="unknown"></i><i class="partial"></i><i class="unknown"></i>
+          <strong>Shape</strong><i class="partial"></i><i class="unknown"></i><i class="unknown"></i><i class="unknown"></i>
+          <strong>Polymer</strong><i class="known"></i><i class="partial"></i><i class="unknown"></i><i class="partial"></i>
+          <strong>Surface / additives</strong><i class="unknown"></i><i class="unknown"></i><i class="unknown"></i><i class="unknown"></i>
+          <strong>Route</strong><i class="partial"></i><i class="unknown"></i><i class="partial"></i><i class="partial"></i>
+          <strong>Tissue / compartment</strong><i class="known"></i><i class="partial"></i><i class="partial"></i><i class="partial"></i>
+          <strong>Persistence / clearance</strong><i class="unknown"></i><i class="unknown"></i><i class="unknown"></i><i class="unknown"></i>
+          <strong>Host vulnerability</strong><i class="partial"></i><i class="unknown"></i><i class="unknown"></i><i class="partial"></i>
+        </div>
+        <p id="matrix-description" class="visual-equivalent" aria-live="polite">Claim P01-CLAIM-005. The evidence view marks reported, partial and unknown coordinates across identity, dose, fate and outcome. Two cells are reported, thirteen are partial and seventeen are unknown. The matrix carries no biological-risk estimate.</p>
+        <div class="matrix-table-wrap">
+          <table id="matrix-data-table">
+            <caption id="matrix-table-caption">Evidence-view text equivalent</caption>
+            <thead><tr><th>Dimension</th><th>Identity</th><th>Dose</th><th>Fate</th><th>Outcome</th></tr></thead>
+            <tbody>
+              <tr><th>Size</th><td>Partial</td><td>Unknown</td><td>Partial</td><td>Unknown</td></tr>
+              <tr><th>Shape</th><td>Partial</td><td>Unknown</td><td>Unknown</td><td>Unknown</td></tr>
+              <tr><th>Polymer</th><td>Reported</td><td>Partial</td><td>Unknown</td><td>Partial</td></tr>
+              <tr><th>Surface / additives</th><td>Unknown</td><td>Unknown</td><td>Unknown</td><td>Unknown</td></tr>
+              <tr><th>Route</th><td>Partial</td><td>Unknown</td><td>Partial</td><td>Partial</td></tr>
+              <tr><th>Tissue / compartment</th><td>Reported</td><td>Partial</td><td>Partial</td><td>Partial</td></tr>
+              <tr><th>Persistence / clearance</th><td>Unknown</td><td>Unknown</td><td>Unknown</td><td>Unknown</td></tr>
+              <tr><th>Host vulnerability</th><td>Partial</td><td>Unknown</td><td>Unknown</td><td>Partial</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </aside>
+
+      <div class="risk-notes">
+        <article class="risk-summary" id="risk-panel" role="tabpanel" aria-labelledby="risk-evidence" tabindex="0">
+          <span class="state-chip contested" id="risk-state">CONTESTED CATEGORY</span>
+          <h3 id="risk-view-title">Which coordinates were actually measured?</h3>
+          <p id="risk-view-copy">Cells show whether the public evidence reports a dimension clearly, partially or leaves it open. Color and pattern carry no estimate of biological danger.</p>
+          <a class="claim-link" id="risk-claim" href="#source-register" data-claim-id="P01-CLAIM-005">Open the unresolved interpretation</a>
+        </article>
+        <div class="counter-thesis" data-claim="P01-CLAIM-028">
+          <span>COUNTER-THESIS</span>
+          <p>The field may fragment into many particle × route × matrix markets. Compliance work may grow without creating one scalable venture category.</p>
+          <a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-028">Failure case and sources</a>
+        </div>
+      </div>
+      <div class="static-risk-register" aria-label="Both risk-matrix views, static fallback">
+        <h3>Complete matrix views</h3>
+        <details open>
+          <summary>Evidence view · identity / dose / fate / outcome</summary>
+          <div class="static-matrix-scroll"><table><thead><tr><th>Dimension</th><th>Identity</th><th>Dose</th><th>Fate</th><th>Outcome</th></tr></thead><tbody>
+            <tr><th>Size</th><td>Partial</td><td>Unknown</td><td>Partial</td><td>Unknown</td></tr><tr><th>Shape</th><td>Partial</td><td>Unknown</td><td>Unknown</td><td>Unknown</td></tr><tr><th>Polymer</th><td>Reported</td><td>Partial</td><td>Unknown</td><td>Partial</td></tr><tr><th>Surface / additives</th><td>Unknown</td><td>Unknown</td><td>Unknown</td><td>Unknown</td></tr><tr><th>Route</th><td>Partial</td><td>Unknown</td><td>Partial</td><td>Partial</td></tr><tr><th>Tissue / compartment</th><td>Reported</td><td>Partial</td><td>Partial</td><td>Partial</td></tr><tr><th>Persistence / clearance</th><td>Unknown</td><td>Unknown</td><td>Unknown</td><td>Unknown</td></tr><tr><th>Host vulnerability</th><td>Partial</td><td>Unknown</td><td>Unknown</td><td>Partial</td></tr>
+          </tbody></table></div>
+          <a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-005">Evidence boundary</a>
+        </details>
+        <details>
+          <summary>Diligence view · measurand / validation / buyer / trigger</summary>
+          <div class="static-matrix-scroll"><table><thead><tr><th>Dimension</th><th>Measurand</th><th>Validation</th><th>Buyer</th><th>Trigger</th></tr></thead><tbody>
+            <tr><th>Size</th><td>Needs proof</td><td>Needs proof</td><td>Open</td><td>Needs proof</td></tr><tr><th>Shape</th><td>Needs proof</td><td>Open</td><td>Open</td><td>Open</td></tr><tr><th>Polymer</th><td>Defined</td><td>Needs proof</td><td>Needs proof</td><td>Needs proof</td></tr><tr><th>Surface / additives</th><td>Open</td><td>Open</td><td>Needs proof</td><td>Needs proof</td></tr><tr><th>Route</th><td>Needs proof</td><td>Open</td><td>Needs proof</td><td>Needs proof</td></tr><tr><th>Tissue / compartment</th><td>Defined</td><td>Needs proof</td><td>Needs proof</td><td>Open</td></tr><tr><th>Persistence / clearance</th><td>Open</td><td>Open</td><td>Open</td><td>Open</td></tr><tr><th>Host vulnerability</th><td>Needs proof</td><td>Open</td><td>Needs proof</td><td>Open</td></tr>
+          </tbody></table></div>
+          <a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-028">Diligence boundary</a>
+        </details>
+      </div>
+    </section>
+
+    <section class="story-scene stack-scene" id="investable-stack" data-scene="investable-stack" data-act="05" data-evidence="Inferred" aria-labelledby="stack-title">
+      <header class="wide-heading">
+        <div><p class="act-label">Act 05 · connect proof to a buyer</p><h2 id="stack-title">Six layers.<br><span>Six different proof gates.</span></h2></div>
+        <div><p>Turning this science into companies runs through six jobs, measure it, map it, attribute cause, prevent release, replace the material and remove what is already in the body. Each job answers to a different buyer on different evidence, so each carries its own proof gate, its own defensibility and its own way of failing. This is the bottleneck map Delphi invests against.</p><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-024">Opening investment posture</a></div>
+      </header>
+      <div class="stack-instrument glass-card">
+        <div class="stack-calibration" aria-hidden="true"><span>MEASURE</span><i></i><span>MAP</span><i></i><span>ATTRIBUTE</span><i></i><span>PREVENT</span><i></i><span>REPLACE</span><i></i><span>REMOVE</span></div>
+        <div class="stack-tabs" role="tablist" aria-label="Investable stack layers">
+          <button type="button" role="tab" aria-selected="true" aria-controls="stack-detail" id="stack-measure" data-layer="measure"><span>01</span>Measure<small>LEAD</small></button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="stack-detail" id="stack-map" data-layer="map" tabindex="-1"><span>02</span>Map<small>SELECT</small></button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="stack-detail" id="stack-attribute" data-layer="attribute" tabindex="-1"><span>03</span>Attribute<small>SELECT</small></button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="stack-detail" id="stack-prevent" data-layer="prevent" tabindex="-1"><span>04</span>Prevent<small>BUILD</small></button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="stack-detail" id="stack-replace" data-layer="replace" tabindex="-1"><span>05</span>Replace<small>BUILD</small></button>
+          <button type="button" role="tab" aria-selected="false" aria-controls="stack-detail" id="stack-remove" data-layer="remove" tabindex="-1"><span>06</span>Remove<small>WATCH</small></button>
+        </div>
+        <article class="stack-detail" id="stack-detail" role="tabpanel" aria-labelledby="stack-measure" tabindex="0">
+          <header>
+            <div><span class="posture-chip lead" id="stack-posture">LEAD · DELPHI INFERENCE</span><p id="stack-horizon">NOW · medium to high development capital</p></div>
+            <h3 id="stack-name">Make results comparable across laboratories.</h3>
+            <p id="stack-problem">Produce a contamination-controlled, matrix-specific result another qualified laboratory can reproduce.</p>
+          </header>
+          <div class="stack-grid">
+            <div><span>ARCHETYPES</span><p id="stack-archetypes">Reference materials · sample-preparation and QA · analytical instruments or assays · proficiency testing</p></div>
+            <div><span>ECONOMIC OWNER</span><p id="stack-buyer">Research sponsors, public agencies, contract laboratories and regulated water laboratories.</p><small id="stack-buyer-state">Verified program and matrix-specific demand; product willingness to pay remains company-specific.</small></div>
+            <div><span>PURCHASE TRIGGER</span><p id="stack-trigger">Funded assay development, laboratory accreditation, required monitoring, cohort scale-up or intervention validation.</p></div>
+            <div><span>DECISIVE PROOF GATE</span><p id="stack-gate">Independent interlaboratory performance on the target matrix with declared recovery, blanks, accuracy, precision and method window.</p></div>
+            <div><span>MOAT HYPOTHESIS</span><p id="stack-moat">A complete reference, QA and workflow system with longitudinal proficiency data. Sensitivity alone is insufficient.</p></div>
+            <div class="failure"><span>FAILURE MODE</span><p id="stack-failure">Standardization may favor incumbents, compress margins or leave demand dependent on episodic public funding.</p></div>
+            <div><span>CAPITAL / ADOPTION</span><p id="stack-capital">Medium to high development capital; research and regulated laboratory adoption precede clinical use.</p></div>
+            <div><span>PLAUSIBLE VENTURE STAGE</span><p id="stack-stage">Delphi hypothesis: formation through grant or pre-seed; institutional venture scaling follows independent reproducibility and repeat demand.</p></div>
+          </div>
+          <footer>
+            <div><span>DELPHI QUESTION</span><strong id="stack-question">Can the platform reproduce the same decision-relevant result across sites without hiding contamination or method boundaries?</strong></div>
+            <div><span>ADVANCES / KILLS</span><p id="stack-milestone">Advances on independent multi-site validation plus a repeat buyer. Dies if performance collapses outside a founder-run laboratory.</p></div>
+            <div class="stack-claim-set"><a class="claim-link" id="stack-claim" href="#source-register" data-claim-id="P01-CLAIM-024">Investment inference</a><a class="claim-link" id="stack-science-claim" href="#source-register" data-claim-id="P01-CLAIM-006">Scientific / policy basis</a></div>
+          </footer>
+        </article>
+        <p class="visual-equivalent" id="stack-visual-equivalent" aria-live="polite">Claim P01-CLAIM-024. Measure is the selected layer with a Lead posture. The proof gate is independent target-matrix reproducibility tied to a repeat decision-linked buyer.</p>
+      </div>
+      <div class="static-stack-register" aria-label="All six investment layers, static fallback">
+        <h3>Complete stack · static reading order</h3>
+        <div>
+          <article data-claim="P01-CLAIM-006 P01-CLAIM-024"><span>01 / LEAD · DELPHI INFERENCE</span><h4>Measure</h4><p><b>Buyer:</b> research sponsors, agencies and defined laboratory workflows. <b>Trigger:</b> validation, accreditation, monitoring or cohort scale-up. <b>Proof:</b> independent target-matrix reproducibility. <b>Failure:</b> incumbents or open standards satisfy demand at commodity economics.</p><div class="static-claim-pair"><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-024">Investment</a><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-006">Evidence</a></div></article>
+          <article data-claim="P01-CLAIM-022 P01-CLAIM-028"><span>02 / SELECT · DELPHI INFERENCE</span><h4>Map</h4><p><b>Buyer:</b> a named research, utility, product or EHS user. <b>Trigger:</b> a repeated source or mitigation decision. <b>Proof:</b> provenance survives every join. <b>Failure:</b> method heterogeneity dominates the attribution.</p><div class="static-claim-pair"><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-028">Investment</a><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-022">Evidence</a></div></article>
+          <article data-claim="P01-CLAIM-023 P01-CLAIM-028"><span>03 / SELECT · DELPHI INFERENCE</span><h4>Attribute</h4><p><b>Buyer:</b> public research or product toxicology R&amp;D. <b>Trigger:</b> a causal discrimination decision. <b>Proof:</b> a property-specific mechanism replicates and predicts. <b>Failure:</b> bespoke projects prevent a reusable learning curve.</p><div class="static-claim-pair"><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-028">Investment</a><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-023">Evidence</a></div></article>
+          <article data-claim="P01-CLAIM-015 P01-CLAIM-025"><span>04 / BUILD · DELPHI INFERENCE</span><h4>Prevent</h4><p><b>Buyer:</b> a defined utility, operator, OEM or manufacturer. <b>Trigger:</b> specification, regulation or avoided operating cost. <b>Proof:</b> audited field capture and full-system economics. <b>Failure:</b> fouling, energy or waste transfer erases value.</p><div class="static-claim-pair"><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-025">Investment</a><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-015">Evidence</a></div></article>
+          <article data-claim="P01-CLAIM-015 P01-CLAIM-025"><span>05 / BUILD · DELPHI INFERENCE</span><h4>Replace</h4><p><b>Buyer:</b> formulation, packaging or procurement teams. <b>Trigger:</b> a named specification or scoped restriction. <b>Proof:</b> performance, safety, fate, lifecycle result and unit economics. <b>Failure:</b> qualification or scale economics collapse.</p><div class="static-claim-pair"><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-025">Investment</a><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-015">Evidence</a></div></article>
+          <article data-claim="P01-CLAIM-020 P01-CLAIM-027"><span>06 / WATCH · DELPHI INFERENCE</span><h4>Remove</h4><p><b>Buyer:</b> research sponsors until an indication and benefit are established. <b>Trigger:</b> controlled evidence of actionable burden. <b>Proof:</b> safe, durable clearance tied to patient benefit. <b>Failure:</b> blood signal, tissue burden and outcome do not converge.</p><div class="static-claim-pair"><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-027">Investment</a><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-020">Evidence</a></div></article>
+        </div>
+      </div>
+      <p class="stack-disclosure" data-claim="P01-CLAIM-024 P01-CLAIM-025 P01-CLAIM-026 P01-CLAIM-027 P01-CLAIM-028">Postures are Delphi investment inferences. Public funding, standards and regulation identify problems and triggers; they do not establish company quality, market size, return or endorsement.</p>
+    </section>
+
+    <section class="story-scene position-scene" id="delphi-position" data-scene="delphi-position" data-act="06" data-evidence="Inferred" aria-labelledby="position-title">
+      <header class="wide-heading">
+        <div><p class="act-label">Act 06 · make the posture falsifiable</p><h2 id="position-title">State the conviction.<br><span>Name what would break it.</span></h2></div>
+        <div><p>In one place, Delphi states what it currently believes, what it still does not know, the specific findings that would prove it wrong and the milestones that would move it. Delphi will act only on a forecast it can also prove wrong.</p><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-024">Current Delphi inference</a></div>
+      </header>
+      <div class="position-layout">
+        <div class="posture-orbit" id="posture-orbit" data-position-state="conviction" aria-label="Current Delphi posture" aria-describedby="position-visual-equivalent">
+          <article class="active" data-posture-node="lead" data-claim="P01-CLAIM-024"><span>LEAD</span><strong>MEASURE</strong><small>References · QA · reproducibility</small></article>
+          <article data-posture-node="build" data-claim="P01-CLAIM-025"><span>BUILD</span><strong>PREVENT / REPLACE</strong><small>Defined source and application proof</small></article>
+          <article data-posture-node="select" data-claim="P01-CLAIM-026"><span>SELECT</span><strong>MAP / ATTRIBUTE / CLINICAL</strong><small>Only when decision-linked</small></article>
+          <article data-posture-node="watch" data-claim="P01-CLAIM-027"><span>WATCH</span><strong>REMOVE</strong><small>Burden · safety · durable benefit</small></article>
+          <div class="orbit-center" aria-hidden="true"><i></i><span id="position-orbit-mode">CURRENT<br>POSITION</span></div>
+          <p class="visual-equivalent" id="position-visual-equivalent" aria-live="polite">Claims P01-CLAIM-024 through P01-CLAIM-027. The current position leads measurement, builds defined prevention and replacement, selects interpretation when decision-linked, and watches removal.</p>
+        </div>
+        <div class="position-console glass-card">
+          <div class="position-tabs" role="tablist" aria-label="Delphi thesis views">
+            <button type="button" role="tab" aria-selected="true" aria-controls="position-panel" id="position-conviction" data-position-view="conviction">Conviction</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="position-panel" id="position-questions" data-position-view="questions" tabindex="-1">Open questions</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="position-panel" id="position-falsifiers" data-position-view="falsifiers" tabindex="-1">Falsifiers</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="position-panel" id="position-milestones" data-position-view="milestones" tabindex="-1">Milestones</button>
+            <button type="button" role="tab" aria-selected="false" aria-controls="position-panel" id="position-sourcing" data-position-view="sourcing" tabindex="-1">Sourcing</button>
+          </div>
+          <article id="position-panel" role="tabpanel" aria-labelledby="position-conviction" tabindex="0">
+            <span class="console-mode" id="position-mode">CURRENT CONVICTION · 16 JUL 2026</span>
+            <h3 id="position-view-title">Infrastructure before interpretation.</h3>
+            <ul id="position-list">
+              <li><strong>Lead</strong><span>Reference, QA and reproducible matrix-specific measurement.</span><a href="#source-register" data-claim-id="P01-CLAIM-024">P01-CLAIM-024</a></li>
+              <li><strong>Build</strong><span>Source control and substitution where a defined buyer can verify full-system economics.</span><a href="#source-register" data-claim-id="P01-CLAIM-025">P01-CLAIM-025</a></li>
+              <li><strong>Select</strong><span>Clinical interpretation after analytical validity and actionability.</span><a href="#source-register" data-claim-id="P01-CLAIM-026">P01-CLAIM-026</a></li>
+              <li><strong>Watch</strong><span>Removal until relevant burden, safe clearance and benefit converge.</span><a href="#source-register" data-claim-id="P01-CLAIM-027">P01-CLAIM-027</a></li>
+            </ul>
+            <a class="claim-link" id="position-claim" href="#source-register" data-claim-id="P01-CLAIM-024">View-level evidence basis</a>
+          </article>
+        </div>
+      </div>
+      <div class="position-boundary" data-claim="P01-CLAIM-028"><span>WHAT COULD BREAK THE THESIS</span><p>The category may fragment faster than standards unify it; buyers may fund compliance work without supporting durable venture margins.</p><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-028">Counter-thesis</a></div>
+      <div class="static-position-register" aria-label="All five Delphi position views, static fallback">
+        <h3>Complete position views</h3>
+        <details open><summary>Conviction</summary><p>Lead Measure; Build Prevent and Replace; Select decision-linked interpretation; Watch Remove.</p></details>
+        <details><summary>Open questions</summary><p>Define the matrix and decision, full-system prevention denominator, clinical actionability, and the relationship between blood, tissue and benefit.</p></details>
+        <details><summary>Falsifiers</summary><p>The thesis weakens with failed reproducibility, absent repeat demand, blocked workflow reuse, or valid clinical results that remain non-actionable.</p></details>
+        <details><summary>Milestones</summary><p>Independent multi-site validation, audited field economics, decision-changing prospective evidence, and controlled durable clearance can move posture.</p></details>
+        <details><summary>Sourcing</summary><p>Prioritize references, transferable QA workflows, defined source control and application-specific materials.</p></details>
+        <div class="static-claim-pair"><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-024">Measure</a><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-025">Prevent + replace</a><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-026">Clinical gate</a><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-027">Remove</a><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-028">Counter-thesis</a></div>
+      </div>
+    </section>
+
+    <section class="story-scene diff-scene" id="thesis-diff" data-scene="thesis-diff" data-act="07" data-evidence="Developing" aria-labelledby="diff-title">
+      <header class="wide-heading">
+        <div><p class="act-label">Act 07 · preserve the audit trail</p><h2 id="diff-title">A governed thesis changes<br><span>one claim at a time.</span></h2></div>
+        <div><p>When new evidence arrives, Delphi updates one claim without erasing the old one. The earlier belief stays on the record, marked with the date it was retired and linked to whatever replaced it. Two 2026 updates show the mechanism, and neither reached this page until a person approved it.</p><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-014">Latest measurement correction</a></div>
+      </header>
+      <div class="diff-tabs" role="tablist" aria-label="Choose thesis diff">
+        <button type="button" role="tab" aria-selected="true" aria-controls="diff-panel" id="diff-measurement" data-diff="measurement">01 / Measurement policy</button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="diff-panel" id="diff-removal" data-diff="removal" tabindex="-1">02 / Removal frontier</button>
+      </div>
+      <div class="diff-history-index" aria-label="Preserved working inferences"><span>PRESERVED HISTORIES</span><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-013">P01-CLAIM-013</a><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-018">P01-CLAIM-018</a></div>
+      <article class="diff-ledger glass-card" id="diff-panel" data-diff-state="measurement" role="tabpanel" aria-labelledby="diff-measurement" aria-describedby="diff-visual-equivalent" tabindex="0">
+        <div class="diff-status"><span id="diff-version">EVIDENCE VERSION · 2026-07-01</span><strong>HUMAN REVIEW REQUIRED</strong></div>
+        <div class="diff-flow">
+          <section class="prior">
+            <span>PRIOR WORKING INFERENCE · PRESERVED</span>
+            <h3 id="diff-prior-title">Near-term national monitoring looked likely.</h3>
+            <p id="diff-prior-copy">Draft CCL 6 elevated microplastics as a drinking-water research priority. The working inference went further than the notice itself.</p>
+            <small id="diff-prior-id">P01-CLAIM-013 · invalid_at 2026-07-01</small>
+            <a class="claim-link" id="diff-prior-claim" href="#source-register" data-claim-id="P01-CLAIM-013">Open preserved claim</a>
+          </section>
+          <div class="diff-arrow" aria-hidden="true"><i></i><span>NEW SOURCE</span></div>
+          <section class="active">
+            <span>ACTIVE CORRECTION</span>
+            <h3 id="diff-active-title">The near-term gate shifts from monitoring to measurement.</h3>
+            <p id="diff-active-copy">Proposed UCMR 6 omits microplastics because a validated method and adequate laboratory capacity are not ready within the cycle.</p>
+            <small id="diff-active-id">P01-CLAIM-014 · valid_from 2026-07-01</small>
+            <a class="claim-link" id="diff-active-claim" href="#source-register" data-claim-id="P01-CLAIM-014">Open active claim</a>
+          </section>
+        </div>
+        <div class="diff-impact">
+          <div><span>CHANGES</span><p id="diff-changes">National monitoring demand moves out; method validation and lab capacity become the immediate bottleneck.</p></div>
+          <div><span>UNCHANGED</span><p id="diff-unchanged">Draft research priority remains. A national limit and category-level health conclusion remain unestablished.</p></div>
+          <div><span>DELPHI EFFECT</span><p id="diff-effect">MEASURE strengthens. Clinical and removal postures stay unchanged.</p></div>
+        </div>
+        <div class="diff-review">
+          <span>PUBLICATION PATH</span><i>NEW SOURCE</i><b aria-hidden="true">→</b><i>CLAIM REVIEW</i><b aria-hidden="true">→</b><i>HUMAN APPROVAL</i><b aria-hidden="true">→</b><i>PUBLIC PASSAGE</i>
+        </div>
+        <a class="claim-link" id="diff-claim" href="#source-register" data-claim-id="P01-CLAIM-014">Open new source + preserved history</a>
+        <p class="visual-equivalent" id="diff-visual-equivalent" aria-live="polite">Claims P01-CLAIM-013 and P01-CLAIM-014. The measurement-policy view preserves the prior inference, activates its successor and leaves clinical and removal postures unchanged.</p>
+      </article>
+      <div class="static-diff-register" aria-label="Both thesis diffs, static fallback">
+        <h3>Complete governed diffs</h3>
+        <article data-claim="P01-CLAIM-013 P01-CLAIM-014"><span>01 / MEASUREMENT POLICY</span><p><b>Preserved:</b> near-term national monitoring appeared likely. <b>Active:</b> the proposed UCMR 6 record shifts the near-term gate to method validation and laboratory capacity. Measure strengthens; clinical and removal postures stay unchanged.</p><div class="static-claim-pair"><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-013">Preserved</a><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-014">Active</a></div></article>
+        <article data-claim="P01-CLAIM-018 P01-CLAIM-019 P01-CLAIM-020"><span>02 / REMOVAL FRONTIER</span><p><b>Preserved:</b> the prior record contained no reported human circulating-signal change. <b>Active:</b> an uncontrolled baseline-dependent assay signal now exists. Validated total-body clearance, durability and benefit remain unestablished; Remove stays Watch.</p><div class="static-claim-pair"><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-018">Preserved</a><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-019">Active</a><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-020">Boundary</a></div></article>
+      </div>
+      <p class="diff-note">This page demonstrates a governed static update. Research reaches the public passage only after human approval.</p>
+    </section>
+
+    <section class="story-scene invitation-scene" id="invitation" data-scene="invitation" data-act="08" data-evidence="Inferred" aria-labelledby="invitation-title">
+      <header class="wide-heading">
+        <div><p class="act-label">Act 08 · respond to a defined question</p><h2 id="invitation-title">Which evidence gate<br><span>can you move?</span></h2></div>
+        <p>Pick the gate you can actually help move. Each choice opens a pre-written email in your own client, already framed around the specific evidence Delphi is looking for. You add the recipient and decide whether to send. Nothing is submitted or tracked from this page.</p>
+      </header>
+      <div class="invitation-grid">
+        <a data-claim="P01-CLAIM-024" href="mailto:?subject=Prophet%2001%20%2F%20I%20build%20measurement&amp;body=Source%20chapter%3A%20Prophet%2001%20%2F%20Measure%0AIntended%20action%3A%20Share%20a%20reproducibility%20or%20reference-material%20capability%0AEvidence%20I%20can%20provide%3A%20%0ARelevant%20matrix%20and%20method%3A%20%0A%0APlease%20add%20the%20approved%20Delphi%20recipient%20before%20sending.">
+          <span>01 / MEASURE</span><strong>I build measurement</strong><p>Reference materials, contamination control, assays, instruments or proficiency workflows.</p><em>Prepare cited email →</em>
+        </a>
+        <a data-claim="P01-CLAIM-026" href="mailto:?subject=Prophet%2001%20%2F%20I%20study%20mechanisms&amp;body=Source%20chapter%3A%20Prophet%2001%20%2F%20Attribute%0AIntended%20action%3A%20Share%20a%20property-%20or%20route-specific%20mechanistic%20result%0AModel%20and%20human%20relevance%3A%20%0AFalsifier%20or%20replication%3A%20%0A%0APlease%20add%20the%20approved%20Delphi%20recipient%20before%20sending.">
+          <span>02 / ATTRIBUTE</span><strong>I study mechanisms</strong><p>Property-, route- and dose-specific evidence with a human-relevance path.</p><em>Prepare cited email →</em>
+        </a>
+        <a data-claim="P01-CLAIM-025" href="mailto:?subject=Prophet%2001%20%2F%20I%20build%20source%20control&amp;body=Source%20chapter%3A%20Prophet%2001%20%2F%20Prevent%0AIntended%20action%3A%20Share%20a%20field-verified%20source-control%20system%0ACustomer%20and%20purchase%20trigger%3A%20%0AAudited%20capture%20denominator%20and%20operating%20cost%3A%20%0A%0APlease%20add%20the%20approved%20Delphi%20recipient%20before%20sending.">
+          <span>03 / PREVENT</span><strong>I prevent release</strong><p>Field evidence, full-system economics and a defined operating owner.</p><em>Prepare cited email →</em>
+        </a>
+        <a data-claim="P01-CLAIM-025" href="mailto:?subject=Prophet%2001%20%2F%20I%20build%20safer%20materials&amp;body=Source%20chapter%3A%20Prophet%2001%20%2F%20Replace%0AIntended%20action%3A%20Share%20an%20application-specific%20material%20platform%0AFunction%20and%20qualification%20evidence%3A%20%0AFate%2C%20lifecycle%20and%20unit%20economics%3A%20%0A%0APlease%20add%20the%20approved%20Delphi%20recipient%20before%20sending.">
+          <span>04 / REPLACE</span><strong>I build safer materials</strong><p>Application performance, safety, fate, lifecycle proof and scale economics.</p><em>Prepare cited email →</em>
+        </a>
+        <a class="institution" data-claim="P01-CLAIM-028" href="mailto:?subject=Prophet%2001%20%2F%20Aligned%20institution&amp;body=Source%20chapter%3A%20Prophet%2001%0AInstitution%20and%20mandate%3A%20%0AIntended%20operating%20collaboration%3A%20%0AEvidence%20gate%20we%20can%20help%20move%3A%20%0A%0AThis%20route%20is%20for%20operating%20research%20and%20ecosystem%20collaboration.%20Capital%20relations%20uses%20a%20separate%20approved%20path.%0APlease%20add%20the%20approved%20Delphi%20recipient%20before%20sending.">
+          <span>05 / INSTITUTION</span><strong>I represent an aligned institution</strong><p>Operating research and ecosystem collaboration. Capital relations follows a separate approved path.</p><em>Prepare operating email →</em>
+        </a>
+      </div>
+      <div class="invitation-evidence" aria-label="Evidence basis for invitation routes"><span>EVIDENCE BASIS</span><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-024">Measure</a><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-025">Prevent + replace</a><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-026">Clinical gate</a><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-028">Failure case</a></div>
+      <div class="static-route-disclosure"><span>STATIC ROUTE</span><p>These links open structured drafts in your email client. You control the recipient and send action; the page submits no form and records no CRM event.</p></div>
+    </section>
+
+    <section class="closing-scene story-scene" id="closing" data-scene="closing" data-act="09" data-evidence="Inferred" aria-labelledby="closing-title">
+      <div class="closing-orbit" aria-hidden="true"><i></i><i></i><i></i><span></span></div>
+      <p class="act-label">Closing frame · conviction within evidence</p>
+      <h2 id="closing-title">The world already<br><span>becomes us.</span></h2>
+      <p class="closing-deck">Delphi's conviction sits earliest where the evidence is strongest, in the tools that make plastic exposure measurable and comparable, and then in prevention a real buyer can verify. Everything further from proof stays on watch until the evidence moves. Each position holds only as far as its evidence does.</p>
+      <div class="closing-position" data-claim="P01-CLAIM-020 P01-CLAIM-024 P01-CLAIM-025 P01-CLAIM-027 P01-CLAIM-028">
+        <article><span>LEAD</span><strong>Measurement gates</strong></article>
+        <article><span>BUILD</span><strong>Verified prevention</strong></article>
+        <article><span>WATCH</span><strong>Human removal</strong></article>
+      </div>
+      <div class="closing-actions">
+        <a class="primary-action" href="https://www.delphi.vc/">Visit Delphi VC <span aria-hidden="true">↗</span></a>
+        <a class="secondary-action" href="#source-register">Open the evidence ledger</a>
+      </div>
+      <div class="closing-evidence" aria-label="Closing position evidence"><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-024">Measurement</a><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-025">Prevention</a><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-027">Removal boundary</a><a class="claim-link" href="#source-register" data-claim-id="P01-CLAIM-028">Counter-thesis</a></div>
+      <p class="closing-boundary">Prophet publishes the reviewed position. Somnus retains its traceable history. Publication remains human-approved.</p>
+    </section>
+
+    <section class="source-register-section" id="source-register" aria-labelledby="source-register-title">
+      <header>
+        <p class="act-label">Evidence ledger · public-safe source pack</p>
+        <h2 id="source-register-title">Every material claim has<br><span>a source and a limit.</span></h2>
+        <p>Open any claim link for its exact wording, evidence state, locator, caveat and last-verified date. The register below remains useful without JavaScript.</p>
+      </header>
+      <details open>
+        <summary><span>Headline evidence and method sources</span><small>24 normalized sources · verified 16 Jul 2026</small></summary>
+        <ol class="source-list">
+          <li id="source-P01-SOURCE-001"><span>001</span><div><strong>Lamoree et al. · Health impacts of microplastic and nanoplastic exposure</strong><p>Nature Medicine, 2025 · Locator: Abstract and analytical/human-evidence sections · Limit: review, not assay validation or causality.</p></div><a href="https://doi.org/10.1038/s41591-025-03902-5">DOI ↗</a></li>
+          <li id="source-P01-SOURCE-002"><span>002</span><div><strong>De Frond et al. · Drinking-water interlaboratory study</strong><p>Chemosphere, 2022 · Locator: Abstract, 22-lab design and results · Limit: simulated clean water, not tissue.</p></div><a href="https://doi.org/10.1016/j.chemosphere.2022.134282">DOI ↗</a></li>
+          <li id="source-P01-SOURCE-003"><span>003</span><div><strong>Ciornii et al. · 84-laboratory VAMAS comparison</strong><p>Analytical Chemistry, 2025 · Locator: Abstract and reproducibility ranges · Limit: simplified PE/PET matrix.</p></div><a href="https://doi.org/10.1021/acs.analchem.4c05403">DOI ↗</a></li>
+          <li id="source-P01-SOURCE-004"><span>004</span><div><strong>Jenner et al. · Detection in human lung tissue</strong><p>STOTEN, 2022 · Locator: Abstract, n=13, 3 μm limit and blanks · Limit: selected small tissue series.</p></div><a href="https://doi.org/10.1016/j.scitotenv.2022.154907">DOI ↗</a></li>
+          <li id="source-P01-SOURCE-005"><span>005</span><div><strong>Marfella et al. · Atheromas and cardiovascular events</strong><p>NEJM, 2024 · Locator: Abstract Methods/Results/Conclusions · Limit: observational association in a selected cohort.</p></div><a href="https://doi.org/10.1056/NEJMoa2309822">DOI ↗</a></li>
+          <li id="source-P01-SOURCE-006"><span>006</span><div><strong>Nihart et al. · Decedent human brain study</strong><p>Nature Medicine, 2025 · Locator: Abstract and cohort comparisons · Limit: postmortem and method-sensitive interpretation.</p></div><a href="https://doi.org/10.1038/s41591-024-03453-1">DOI ↗</a></li>
+          <li id="source-P01-SOURCE-007"><span>007</span><div><strong>Chartres et al. · Rapid systematic review</strong><p>ES&amp;T, 2024 · Locator: Abstract and included-study counts · Limit: many conclusions depend on animal evidence.</p></div><a href="https://doi.org/10.1021/acs.est.3c09524">DOI ↗</a></li>
+          <li id="source-P01-SOURCE-008"><span>008</span><div><strong>Xu et al. · More rigorous science is needed</strong><p>Nature, 2025 · Locator: full commentary · Limit: commentary, not a new dataset.</p></div><a href="https://doi.org/10.1038/d41586-025-00702-2">DOI ↗</a></li>
+          <li id="source-P01-SOURCE-009"><span>009</span><div><strong>EPA · Microplastics Research</strong><p>Locator: Methods Development and Standardization · Limit: research page, not a limit or clinical method.</p></div><a href="https://www.epa.gov/water-research/microplastics-research">EPA ↗</a></li>
+          <li id="source-P01-SOURCE-010"><span>010</span><div><strong>NIST · Advancing MNP Metrology</strong><p>Updated 2025 · Locator: Reference Materials, Separations, Emerging Methods · Limit: roadmap, not completed validation.</p></div><a href="https://www.nist.gov/circular-economy/advancing-micro-and-nanoplastic-mnp-metrology">NIST ↗</a></li>
+          <li id="source-P01-SOURCE-011"><span>011</span><div><strong>ISO 24187:2023</strong><p>Locator: catalog Abstract and scope · Limit: environmental principles, not human biomonitoring or monitoring requirements.</p></div><a href="https://www.iso.org/standard/78033.html">ISO ↗</a></li>
+          <li id="source-P01-SOURCE-012"><span>012</span><div><strong>California Water Board · Microplastics drinking water</strong><p>Locator: Actions; Testing and Reporting · Limit: state method framework, not health limit.</p></div><a href="https://www.waterboards.ca.gov/drinking_water/certlic/drinkingwater/microplastics.html">State record ↗</a></li>
+          <li id="source-P01-SOURCE-013"><span>013</span><div><strong>EPA · Draft CCL 6 announcement</strong><p>2 Apr 2026 · Locator: candidate-list status · Limit: priority step, not regulation.</p></div><a href="https://www.epa.gov/newsreleases/epa-takes-bold-action-ensure-drinking-water-safe-microplastics-pharmaceuticals-and">EPA ↗</a></li>
+          <li id="source-P01-SOURCE-014"><span>014</span><div><strong>European Commission · Regulation 2023/2055</strong><p>Locator: Scope, Exclusions, Transition periods · Limit: intentionally added particles in scoped uses, not a blanket ban.</p></div><a href="https://single-market-economy.ec.europa.eu/sectors/chemicals/reach/restrictions/commission-regulation-eu-20232055-restriction-microplastics-intentionally-added-products_en">EU ↗</a></li>
+          <li id="source-P01-SOURCE-015"><span>015</span><div><strong>ARPA-H · STOMP program</strong><p>2 Apr 2026 · Locator: Problem, Solution, Technical Areas · Limit: program objective, not achieved technology.</p></div><a href="https://arpa-h.gov/explore-funding/programs/stomp">ARPA-H ↗</a></li>
+          <li id="source-P01-SOURCE-016"><span>016</span><div><strong>ARPA-H · STOMP FAQ</strong><p>Locator: budget, TA3 timing, validation and reference-material answers · Limit: commitment and anticipated awards are not award results.</p></div><a href="https://arpa-h.gov/explore-funding/programs/stomp/faqs">FAQ ↗</a></li>
+          <li id="source-P01-SOURCE-017"><span>017</span><div><strong>ARPA-H · STOMP launch</strong><p>2 Apr 2026 · Locator: $144m commitment and program structure · Limit: launch language is directional.</p></div><a href="https://arpa-h.gov/news-and-events/arpa-h-launches-groundbreaking-program-combat-toxic-microplastics-body">ARPA-H ↗</a></li>
+          <li id="source-P01-SOURCE-018"><span>018</span><div><strong>NIEHS · Exposomics strategy</strong><p>Reviewed 2025 · Locator: definition and research priorities · Limit: strategy, not market forecast or dedicated MNP budget.</p></div><a href="https://www.niehs.nih.gov/about/strategicplan/research/exposomics">NIEHS ↗</a></li>
+          <li id="source-P01-SOURCE-019"><span>019</span><div><strong>WHO · Dietary and inhalation exposure review</strong><p>2022 · Locator: Overview; evidence through Dec 2021 · Limit: historical evidence cutoff.</p></div><a href="https://www.who.int/publications/i/item/9789240054608">WHO ↗</a></li>
+          <li id="source-P01-SOURCE-020"><span>020</span><div><strong>Weinstein et al. · Plasma exchange and circulating particles</strong><p>J Clinical Apheresis, 2026 · Locator: Methods, Table 2, Discussion and Limitations · Limit: proprietary assay, uncontrolled, no total-body or outcome evidence.</p></div><a href="https://doi.org/10.1002/jca.70135">DOI ↗</a></li>
+          <li id="source-P01-SOURCE-021"><span>021</span><div><strong>NCT07658443 · DFPP-MNP</strong><p>Posted Jun 2026 · Locator: Study Overview, Design and Outcomes · Limit: estimated n=20 observational biomarker study, no results.</p></div><a href="https://clinicaltrials.gov/study/NCT07658443">ClinicalTrials.gov ↗</a></li>
+          <li id="source-P01-SOURCE-022"><span>022</span><div><strong>EPA · Draft CCL 6 Federal Register notice</strong><p>91 FR 17186 · Locator: pp. 17193–17194, four research needs · Limit: imposes no requirement.</p></div><a href="https://www.federalregister.gov/documents/2026/04/06/2026-06662/drinking-water-contaminant-candidate-list-6-draft">Federal Register ↗</a></li>
+          <li id="source-P01-SOURCE-023"><span>023</span><div><strong>EPA · Proposed UCMR 6</strong><p>91 FR 39952 · Locator: §III.E.1, pp. 39959–39960 · Limit: proposed, not final; omission is not a safety conclusion.</p></div><a href="https://www.federalregister.gov/documents/2026/07/01/2026-13263/revisions-to-establish-the-sixth-unregulated-contaminant-monitoring-rule-ucmr-6-for-public-water">Federal Register ↗</a></li>
+          <li id="source-P01-SOURCE-024"><span>024</span><div><strong>Li et al. · Environmental distribution and human exposure</strong><p>Environment &amp; Health, 2023 · Locator: Introduction; Antarctic to Arctic, Everest to Mariana Trench · Limit: review; establishes presence and exposure, not disease.</p></div><a href="https://doi.org/10.1021/envhealth.3c00052">DOI ↗</a></li>
+        </ol>
+      </details>
+      <p class="register-footnote">External sources open only on request. No analytics or trackers. Last verification is recorded per source in canonical JSON.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div><strong>PROPHET 01 / THE PLASTIC WITHIN</strong><p>A Delphi public evidence edition · static artifact · 16 July 2026</p></div>
+    <p>Investment research only. This page provides no medical advice or company endorsement. Detection does not establish causality. Publication remains human-approved.</p>
+  </footer>
+
+  <dialog class="source-drawer" id="source-drawer" aria-labelledby="drawer-title" aria-modal="true">
+    <div class="drawer-shell">
+      <header>
+        <div><span id="drawer-state">EVIDENCE</span><h2 id="drawer-title">Claim + source</h2></div>
+        <button type="button" id="close-sources" aria-label="Close source and method drawer">Close <span aria-hidden="true">×</span></button>
+      </header>
+      <div class="drawer-body">
+        <section class="drawer-claim">
+          <p class="drawer-id" id="drawer-claim-id">Select any material claim.</p>
+          <blockquote id="drawer-claim-copy">The full wording, state and boundary will appear here.</blockquote>
+          <dl>
+            <div><dt>Status</dt><dd id="drawer-status">Not selected</dd></div>
+            <div><dt>Evidence type</dt><dd id="drawer-type">Not selected</dd></div>
+            <div><dt>Scope</dt><dd id="drawer-scope">Not selected</dd></div>
+            <div><dt>Valid time</dt><dd id="drawer-validity">Not selected</dd></div>
+          </dl>
+          <div class="drawer-limit"><span>WHAT THIS DOES NOT ESTABLISH</span><p id="drawer-caveat">Select a claim to read its boundary.</p></div>
+          <div class="drawer-conflict" id="drawer-conflict" hidden><span>CONFLICT / HISTORY</span><p id="drawer-conflict-copy"></p></div>
+        </section>
+        <section class="drawer-sources">
+          <h3>Sources + exact locators</h3>
+          <div id="drawer-source-list"></div>
+        </section>
+      </div>
+      <footer><span id="drawer-verified">Last verified after claim selection</span><a href="research/EVIDENCE_REGISTER.md">Full evidence register</a></footer>
+    </div>
+  </dialog>
+
+  <noscript><div class="noscript-note">JavaScript is off. All eight acts, the complete stack, evidence boundaries and source register remain available below; animated state and the claim drawer are disabled.</div></noscript>
+
+  <script src="js/atmosphere.js" defer></script>
+  <script src="js/sources.js" defer></script>
+  <script src="js/evidence.js" defer></script>
+  <script src="js/opportunity.js" defer></script>
+  <script src="js/story.js" defer></script>
+</body>
+</html>
