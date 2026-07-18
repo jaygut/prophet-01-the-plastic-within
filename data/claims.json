@@ -475,7 +475,7 @@
     "superseded_by": null,
     "valid_from": "2026-07-16",
     "invalid_at": null,
-    "used_in_scenes": ["investable-stack", "delphi-position", "invitation", "closing"],
+    "used_in_scenes": ["risk-matrix", "investable-stack", "delphi-position", "invitation", "closing"],
     "approved_for_publication": true,
     "last_verified": "2026-07-16"
   },

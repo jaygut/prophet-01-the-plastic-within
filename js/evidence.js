@@ -300,9 +300,12 @@
 
     Object.entries(data.lanes).forEach(([lane, values]) => {
       const node = document.querySelector(`[data-lane="${lane}"]`);
-      if (!node) return;
-      node.className = values[0];
-      setText(`lane-${lane}-state`, values[1]);
+      if (node) {
+        node.className = values[0];
+        setText(`lane-${lane}-state`, values[1]);
+      }
+      const ray = document.querySelector(`[data-ray="${lane}"]`);
+      if (ray) ray.setAttribute("class", "mg-ray " + values[0]);
     });
     const panel = byId("method-panel");
     if (panel && button) panel.setAttribute("aria-labelledby", button.id);
