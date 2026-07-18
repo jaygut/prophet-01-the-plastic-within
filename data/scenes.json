@@ -12,7 +12,7 @@
     "visual_mode": "boundary-crossing",
     "publication_state": "approved",
     "evidence_state": "observed",
-    "illustrative_elements": ["the abstract sampled-matrix interface encodes no anatomical trajectory, dose or prevalence"],
+    "illustrative_elements": ["the anatomical figure is illustrative and not to scale; coral highlights mark only tissues where cited studies reported detection (lung, arterial plaque), unhighlighted organs are anatomical context, and the tracked marker traces the source-to-sampled-tissue measurement chain, not a biological trajectory, dose or prevalence"],
     "last_reviewed": "2026-07-16"
   },
   {

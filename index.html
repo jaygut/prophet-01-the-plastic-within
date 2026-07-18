@@ -78,35 +78,81 @@
         <a class="enter-story" href="#particle">Follow one particle <span aria-hidden="true">↓</span></a>
       </div>
       <div class="hero-instrument" aria-hidden="true">
-        <svg class="hero-diagram" viewBox="0 0 960 600" role="presentation" preserveAspectRatio="xMidYMid meet">
+        <div class="hero-legend" aria-hidden="true">
+          <span class="leg is-source"><i class="leg-num">01</i><b>SOURCE</b><em>everyday environment</em><small>air, water, food and materials shed particles</small></span>
+          <span class="leg is-boundary"><i class="leg-num">02</i><b>SAMPLED BOUNDARY</b><em>where a study takes its sample</em><small>the interface a measurement method can reach</small></span>
+          <span class="leg is-tissue"><i class="leg-num">03</i><b>SAMPLED TISSUE</b><em>the body sample examined</em><small>e.g. lung tissue, arterial plaque</small></span>
+        </div>
+        <svg class="hero-diagram" viewBox="0 0 720 720" role="presentation" preserveAspectRatio="xMidYMid meet">
           <defs>
-            <linearGradient id="tissue-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a999ff" stop-opacity=".2"/><stop offset="1" stop-color="#66c7f2" stop-opacity=".04"/></linearGradient>
-            <radialGradient id="tissue-core" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ff7f73" stop-opacity=".32"/><stop offset="1" stop-color="#ff7f73" stop-opacity="0"/></radialGradient>
+            <linearGradient id="heroTorso" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a999ff" stop-opacity=".07"/><stop offset="1" stop-color="#66c7f2" stop-opacity=".02"/></linearGradient>
+            <linearGradient id="heroLung" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#66c7f2" stop-opacity=".1"/><stop offset="1" stop-color="#66c7f2" stop-opacity=".02"/></linearGradient>
+            <linearGradient id="heroLungWarm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff7f73" stop-opacity=".2"/><stop offset="1" stop-color="#ff7f73" stop-opacity=".04"/></linearGradient>
+            <radialGradient id="heroGlow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ff7f73" stop-opacity=".22"/><stop offset="1" stop-color="#ff7f73" stop-opacity="0"/></radialGradient>
           </defs>
           <g class="env-dots">
-            <circle cx="70" cy="165" r="4"/><circle cx="152" cy="118" r="2.5" class="warm"/><circle cx="112" cy="288" r="3"/>
-            <circle cx="214" cy="228" r="2"/><circle cx="58" cy="372" r="2.5" class="cool"/><circle cx="186" cy="404" r="3.5" class="warm"/>
-            <circle cx="246" cy="150" r="2"/><circle cx="96" cy="462" r="2"/><circle cx="252" cy="352" r="2.5"/>
+            <circle cx="60" cy="220" r="4"/><circle cx="120" cy="185" r="2.5" class="warm"/><circle cx="44" cy="330" r="3"/>
+            <circle cx="150" cy="300" r="2"/><circle cx="40" cy="430" r="2.5" class="cool"/><circle cx="128" cy="470" r="3.5" class="warm"/>
+            <circle cx="150" cy="220" r="2"/><circle cx="70" cy="520" r="2"/><circle cx="150" cy="392" r="2.5"/>
+            <circle cx="96" cy="560" r="2" class="cool"/><circle cx="44" cy="270" r="1.8"/><circle cx="122" cy="540" r="2.2" class="warm"/>
           </g>
-          <g class="boundary-line">
-            <path d="M424 56 C 452 186, 402 326, 440 452 C 458 512, 430 532, 440 556" fill="none" stroke="#66c7f2" stroke-opacity=".42" stroke-dasharray="3 7"/>
-            <rect x="402" y="282" width="58" height="64" rx="7" fill="rgba(102,199,242,.05)" stroke="#66c7f2" stroke-opacity=".55"/>
+          <g class="aperture-group">
+            <line class="scan" x1="209" y1="180" x2="209" y2="520"/>
+            <rect class="aperture-fill" x="180" y="260" width="58" height="98" rx="6"/>
+            <rect class="aperture" x="180" y="260" width="58" height="98" rx="6"/>
+            <path class="aperture-tick" d="M180 276 v-16 h16"/><path class="aperture-tick" d="M238 276 v-16 h-16"/>
+            <path class="aperture-tick" d="M180 342 v16 h16"/><path class="aperture-tick" d="M238 342 v16 h-16"/>
+            <text class="aperture-label" x="209" y="250" text-anchor="middle">SAMPLE</text>
           </g>
-          <g class="figure">
-            <circle class="head" cx="762" cy="162" r="56" fill="url(#tissue-fill)" stroke="#a999ff" stroke-opacity=".38"/>
-            <path class="torso" d="M640 556 C 640 384, 690 296 762 292 C 834 296, 884 384, 884 556 Z" fill="url(#tissue-fill)" stroke="#a999ff" stroke-opacity=".38"/>
-            <ellipse class="tissue-core" cx="762" cy="380" rx="66" ry="80" fill="url(#tissue-core)"/>
+          <g class="body" transform="translate(-365.2,-26) scale(1.12)">
+            <ellipse class="torso-fill" cx="705" cy="80" rx="41" ry="47"/>
+            <ellipse class="torso-line" cx="705" cy="80" rx="41" ry="47"/>
+            <path class="torso-fill" d="M687 120 C 687 132, 684 142, 680 150 L730 150 C 726 142, 723 132, 723 120 Z"/>
+            <path class="torso-line" d="M687 120 C 687 132, 684 142, 680 150 M730 150 C 726 142, 723 132, 723 120"/>
+            <path class="arm" d="M588 196 C 566 216, 560 254, 566 300 C 568 318, 574 330, 582 338"/>
+            <path class="arm" d="M822 196 C 844 216, 850 254, 844 300 C 842 318, 836 330, 828 338"/>
+            <path class="torso-fill" d="M684 150 C 640 156, 604 172, 586 194 C 577 232, 597 320, 612 368 C 620 402, 588 414, 594 442 C 600 496, 638 540, 662 552 C 680 560, 730 560, 748 552 C 772 540, 810 496, 816 442 C 822 414, 790 402, 798 368 C 813 320, 833 232, 824 194 C 806 172, 770 156, 726 150 C 724 148, 686 148, 684 150 Z"/>
+            <path class="torso-line" d="M684 150 C 640 156, 604 172, 586 194 C 577 232, 597 320, 612 368 C 620 402, 588 414, 594 442 C 600 496, 638 540, 662 552 C 680 560, 730 560, 748 552 C 772 540, 810 496, 816 442 C 822 414, 790 402, 798 368 C 813 320, 833 232, 824 194 C 806 172, 770 156, 726 150 C 724 148, 686 148, 684 150 Z"/>
+            <path class="ctx" d="M600 356 C 640 350, 698 352, 722 366 C 728 388, 710 412, 680 420 C 648 428, 616 418, 604 400 C 597 388, 595 368, 600 356 Z"/>
+            <path class="ctx" d="M736 360 C 762 352, 792 362, 798 384 C 802 404, 788 418, 770 418 C 752 418, 740 408, 736 390 C 734 378, 733 368, 736 360 Z"/>
+            <path class="kidney" d="M640 402 C 632 400, 628 412, 632 424 C 636 434, 648 434, 652 424 C 655 416, 650 404, 640 402 Z"/>
+            <path class="kidney" d="M770 402 C 778 400, 782 412, 778 424 C 774 434, 762 434, 758 424 C 755 416, 760 404, 770 402 Z"/>
+            <path class="gut" d="M632 444 L632 510 C 632 526, 644 536, 660 536"/>
+            <path class="gut" d="M632 450 C 660 444, 692 444, 706 444 C 738 444, 762 444, 780 450"/>
+            <path class="gut" d="M780 444 L780 506 C 780 524, 768 536, 752 538"/>
+            <path class="gut" d="M660 536 C 690 542, 726 540, 710 554 C 706 559, 704 562, 710 568"/>
+            <path class="gut-small" d="M654 458 C 690 452, 726 460, 740 474 C 750 486, 720 492, 676 488 C 656 486, 658 500, 688 504 C 722 508, 752 500, 748 514 C 744 524, 706 522, 678 518"/>
+            <path class="diaphragm" d="M588 346 C 622 322, 662 324, 705 332 C 750 324, 788 322, 822 346"/>
+            <path class="lung-sampled" d="M690 190 C 654 188, 606 202, 590 236 C 574 270, 580 318, 600 344 C 618 364, 668 360, 684 342 C 692 322, 692 242, 690 190 Z"/>
+            <path class="lung" d="M720 190 C 758 188, 806 202, 822 236 C 838 270, 832 318, 812 344 C 796 362, 752 360, 738 346 C 744 324, 724 314, 728 290 C 732 264, 722 234, 720 190 Z"/>
+            <path class="lung-detail" d="M705 150 L705 202 M705 202 C 722 216, 762 228, 792 240"/>
+            <path class="lung-detail-warm" d="M705 202 C 688 216, 648 228, 618 240"/>
+            <path class="lung-detail-warm" d="M602 276 C 632 288, 662 294, 682 294"/>
+            <path class="lung-detail" d="M820 276 C 792 288, 764 294, 746 292"/>
+            <path class="heart" d="M700 264 C 690 248, 700 234, 714 238 C 720 228, 736 228, 742 242 C 750 252, 750 270, 742 288 C 736 302, 724 322, 714 334 C 712 336, 709 336, 707 333 C 698 318, 690 294, 692 278 C 693 272, 696 266, 700 264 Z"/>
+            <path class="vessel" d="M714 242 C 720 214, 740 200, 758 208 C 767 212, 767 228, 759 238"/>
+            <path class="vessel-2" d="M704 242 C 700 218, 692 208, 682 208"/>
+            <g class="skel">
+              <path d="M705 156 L705 336"/>
+              <path d="M676 168 C 640 172, 612 182, 596 196"/><path d="M734 168 C 770 172, 798 182, 814 196"/>
+              <path d="M705 184 C 656 188, 612 204, 596 232"/><path d="M705 184 C 754 188, 798 204, 814 232"/>
+              <path d="M705 218 C 652 224, 610 242, 596 272"/><path d="M705 218 C 758 224, 800 242, 814 272"/>
+              <path d="M705 252 C 652 260, 612 280, 600 308"/><path d="M705 252 C 758 260, 798 280, 810 308"/>
+            </g>
+            <ellipse cx="636" cy="264" rx="46" ry="54" fill="url(#heroGlow)"/>
+            <circle class="reticle" cx="636" cy="264" r="15"/><circle class="reticle" cx="636" cy="264" r="3"/>
+            <path class="leader" d="M632 249 L624 176"/>
+            <text class="callout" x="620" y="168" text-anchor="middle">LUNG TISSUE</text>
+            <text class="callsub" x="620" y="182" text-anchor="middle">detected · Jenner 2022</text>
+            <ellipse cx="756" cy="212" rx="30" ry="26" fill="url(#heroGlow)" opacity=".85"/>
+            <circle class="reticle" cx="756" cy="212" r="12"/><circle class="reticle" cx="756" cy="212" r="2.5"/>
+            <path class="leader" d="M768 212 L802 216"/>
+            <text class="callout" x="808" y="216">ARTERIAL PLAQUE</text>
+            <text class="callsub" x="808" y="230">detected · Marfella 2024</text>
           </g>
-          <path class="particle-track" d="M112 288 C 260 298, 362 318, 431 314 C 560 306, 646 366, 762 380" fill="none"/>
-          <circle class="tracked-particle" cx="112" cy="288" r="5.5"/>
+          <path class="particle-track" d="M40 322 C 120 322, 175 316, 209 309 C 270 300, 320 280, 347 267" fill="none"/>
+          <circle class="tracked-particle" cx="40" cy="322" r="5"/>
         </svg>
-        <div class="hero-legend" aria-hidden="true">
-          <span><b>SOURCE</b><small>everyday environment</small></span>
-          <i></i>
-          <span><b>SAMPLED BOUNDARY</b><small>where a study samples</small></span>
-          <i></i>
-          <span><b>SAMPLED TISSUE</b><small>the body sample examined</small></span>
-        </div>
         <div class="hero-caption"><span>ILLUSTRATIVE DIAGRAM</span><small>No amount, frequency or health risk is shown</small></div>
       </div>
       <div class="scroll-cue" aria-hidden="true"><i></i><span>SCROLL TO RESOLVE</span></div>
