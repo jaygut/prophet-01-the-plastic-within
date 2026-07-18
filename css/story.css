@@ -570,11 +570,15 @@ main { position: relative; z-index: 1; }
   .mg-ray.is-on { stroke:var(--mint); filter:drop-shadow(0 0 5px rgba(85,230,177,.5)); }
   .mg-ray.is-off { stroke:var(--coral); stroke-dasharray:4 6; opacity:.55; }
   .mg-ray.is-na { stroke:var(--muted-2); stroke-dasharray:3 6; opacity:.4; }
-  .mg-method { position:absolute; left:20.5%; top:38%; transform:translate(-50%,-50%); width:150px; text-align:center; pointer-events:none; }
-  .mg-method span { display:block; color:var(--violet); font-family:var(--mono); font-size:9px; letter-spacing:.1em; }
-  .mg-method strong { display:block; margin-top:5px; color:var(--paper); font-size:22px; line-height:1; }
+  /* Method label sits centred on the prism: 23.9% is the horizontal mid-line of the triangle's
+     usable text band and 46.7% is its apex line, so the mode and the name share one centre axis
+     and neither crosses an edge. text-indent cancels the trailing letter-space so the centred
+     glyphs are optically centred, not shifted left. */
+  .mg-method { position:absolute; left:24.2%; top:46.7%; transform:translate(-50%,-50%); width:170px; text-align:center; pointer-events:none; }
+  .mg-method span { display:block; color:var(--violet); font-family:var(--mono); font-size:9px; letter-spacing:.1em; text-indent:.1em; white-space:nowrap; }
+  .mg-method strong { display:block; margin-top:5px; color:var(--paper); font-size:22px; line-height:1; white-space:nowrap; }
   .method-prism[data-method-kind="qa"] .mg-method strong { font-size:16px; }
-  .mg-input-label { position:absolute; left:5.4%; top:70%; transform:translateX(-50%); width:150px; text-align:center; color:var(--muted-2); font-family:var(--mono); font-size:9px; letter-spacing:.08em; }
+  .mg-input-label { position:absolute; left:5.7%; top:70%; transform:translateX(-50%); width:150px; text-align:center; color:var(--muted-2); font-family:var(--mono); font-size:9px; letter-spacing:.08em; text-indent:.08em; }
   .mg-norank { position:absolute; right:0; top:1%; color:var(--muted-2); font-family:var(--mono); font-size:8px; letter-spacing:.1em; }
   .mg-out-terminus { position:absolute; left:52%; top:1%; color:var(--muted-2); font-family:var(--mono); font-size:9px; letter-spacing:.12em; }
   .output-lanes { position:absolute; inset:0; display:block; }
